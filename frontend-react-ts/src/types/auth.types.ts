@@ -29,7 +29,7 @@ export interface IAuthUser {
 
 export interface ILoginResponseDto {
   newToken: string;
-  userInfo: string;
+  userInfo: IAuthUser;
 }
 
 export interface IAuthContextState {
@@ -46,7 +46,7 @@ export enum IAuthContextActionTypes {
 
 export interface IAuthContextAction {
   type: IAuthContextActionTypes;
-  payload: IAuthUser;
+  payload?: IAuthUser;
 }
 
 export interface IAuthContext {

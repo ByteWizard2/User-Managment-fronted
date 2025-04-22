@@ -12,7 +12,7 @@ export const setSession = (accessToken: string | null) => {
 };
 
 export const getSession = () => {
-  return localStorage.getItem("accestoken");
+  return localStorage.getItem("accessToken");
 };
 
 export const allAccessRoles = [
@@ -29,7 +29,7 @@ export const managerAccessRoles = [
 export const adminAccessRoles = [RolesEnum.OWNER, RolesEnum.ADMIN];
 export const ownerAccessRoles = [RolesEnum.OWNER];
 
-//we need to specify which Roles can be updated by Logged-in user
+// We need to specify which Roles can be updated by Logged-in user
 export const allowedRolesForUpdateArray = (
   loggedInUser?: IAuthUser
 ): string[] => {
@@ -38,8 +38,8 @@ export const allowedRolesForUpdateArray = (
     : [RolesEnum.MANAGER, RolesEnum.USER];
 };
 
-//we need to controll that Owner cannot change Owner role
-//Also, Admin cannot change Owner role and Admin role
+// we need to control that Owner cannot change owner role
+// Also, Admin cannot change owner role and admin role
 export const isAuthorizedForUpdateRole = (
   loggedInUserRole: string,
   selectedUserRole: string
@@ -57,5 +57,6 @@ export const isAuthorizedForUpdateRole = (
   ) {
     result = false;
   }
+
   return result;
 };

@@ -39,9 +39,9 @@ export interface IAuthContextState {
 }
 
 export enum IAuthContextActionTypes {
-  INITIAL = "INITIAL",
-  LOGIN = "LOGIN",
-  LOGOUT = "LOGOUT",
+  INITIAL = 'INITIAL',
+  LOGIN = 'LOGIN',
+  LOGOUT = 'LOGOUT',
 }
 
 export interface IAuthContextAction {
@@ -66,10 +66,8 @@ export interface IAuthContext {
 }
 
 export enum RolesEnum {
-  OWNER = "OWNER",
-  ADMIN = "ADMIN",
-  MANAGER = "MANAGER",
-  USER = "USER",
+  OWNER = 'OWNER',
+  ADMIN = 'ADMIN',
+  MANAGER = 'MANAGER',
+  USER = 'USER',
 }
-
-
